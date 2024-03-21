@@ -71,12 +71,12 @@ public class PerfectNumberController extends Application {
                 num = Integer.parseInt(numTextField.getText());
                 cnt = Integer.parseInt(cntTextField.getText());
             } catch (NumberFormatException e) {
-                showError("Please enter valid numbers.");
+                errorJak("Please enter valid numbers.");
                 return;
             }
 
             if (num <= 0 || cnt <= 0) {
-                showError("Please enter positive numbers.");
+                errorJak("Please enter positive numbers.");
                 return;
             }
 
@@ -100,7 +100,7 @@ public class PerfectNumberController extends Application {
 
     }
 
-    private void calculateCounts(int num) {
+    private void calculateJak(int num) {
 
         int lessThanPerfectCount = 0;
 
@@ -123,7 +123,7 @@ public class PerfectNumberController extends Application {
         moreThanPerfectLabel.setText("More than perfect: " + moreThanPerfectCount);
     }
 
-    private void showError(String message) {
+    private void errorJak(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
         alert.setHeaderText(null);
@@ -195,7 +195,7 @@ public class PerfectNumberController extends Application {
                     }
                 }
                 if (allThreadsDone) {
-                    calculateCounts(num);
+                    calculateJak(num);
                 }
             });
         }
