@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.PerfectNumberController"
+      spacing="10" alignment="CENTER" padding="10">
+    <Label text="Enter a number:"/>
+    <TextField fx:id="numTextField"/>
+    <Label text="Enter number of threads:"/>
+    <TextField fx:id="cntTextField"/>
+    <Button text="Find Perfect Numbers" onAction="#findPerfectNumbers"/>
+    <Label text="Perfect Numbers:"/>
+    <TextArea fx:id="perfectNumbersTextArea" editable="false"/>
+    <Label fx:id="lessThanPerfectLabel"/>
+    <Label fx:id="moreThanPerfectLabel"/>
+</VBox>
